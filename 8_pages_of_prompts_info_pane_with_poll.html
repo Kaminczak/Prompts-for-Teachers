@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Pages of Prompts for Teachers</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: auto;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow-y: auto;
+            padding: 20px;
+            position: relative;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+        .octagon-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin-top: 20px;
+        }
+        .button {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 11px;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-sizing: border-box;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #2E8B57;
+        }
+        .attribution {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            font-style: italic;
+            color: #555;
+            width: 80%;
+            max-width: 200px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 100px;
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        .stamp {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 12px;
+            padding: 8px 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5);
+        }
+        .info-pane {
+            display: none;
+            background-color: white;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+            border: 2px solid #2E8B57;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="languageToggle" data-lang="en" onclick="toggleLanguage()" style="
+        position: absolute; 
+        top: 10px; 
+        right: 20px; 
+        padding: 10px 15px; 
+        background-color: #2E8B57; 
+        color: white; 
+        border: none; 
+        cursor: pointer; 
+        font-size: 14px; 
+        border-radius: 5px;">
+        🇳🇱 Nederlands
+    </button>
+
+    <div class="title" id="pageTitle">8 Pages of Prompts for Teachers</div>
+
+    <div class="octagon-container">
+        <button class="button" style="top: 0%; left: 50%; transform: translate(-50%, 0);" onclick="showInfo('info1')">Create Activating Learning Activities</button>
+        <button class="button" style="top: 15%; left: 85%; transform: translate(-50%, 0);" onclick="showInfo('info2')">Create Your Own Rubrics</button>
+        <button class="button" style="top: 50%; left: 100%; transform: translate(-100%, -50%);" onclick="showInfo('info3')">Reinvent Writing Assignments</button>
+        <button class="button" style="top: 85%; left: 85%; transform: translate(-50%, -100%);" onclick="showInfo('info4')">Generate Quiz Questions</button>
+        <button class="button" style="top: 100%; left: 50%; transform: translate(-50%, -100%);" onclick="showInfo('info5')">Transform Assessment</button>
+        <button class="button" style="top: 85%; left: 15%; transform: translate(-50%, -100%);" onclick="showInfo('info6')">Improve Learning Outcomes</button>
+        <button class="button" style="top: 50%; left: 0%; transform: translate(0, -50%);" onclick="showInfo('info7')">Discuss AI with Students</button>
+        <button class="button" style="top: 15%; left: 15%; transform: translate(-50%, 0);" onclick="showInfo('info8')">Make Skills More Explicit in Syllabus</button>
+
+        <div class="attribution">Adapted from the authors Person X and Person Y</div>
+    </div>
+
+    <div class="footer" id="footerText">The TSB Education Innovation Team
+    <br><br>
+    <a href="https://chat.openai.com" target="_blank" style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #2E8B57;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    " onmouseover="this.style.backgroundColor='#3CB371';" onmouseout="this.style.backgroundColor='#2E8B57';">
+        Go to ChatGPT
+    </a>
+</div>
+
+    <div class="info-pane" id="info6">
+        <h3 class="pane-title">### Activity 4: Create, Analyze, or Improve Your Intended Learning Outcomes</h3>
+        <p><strong>Summary:</strong><br/>
+        Formulate, evaluate, and optimize your intended learning outcomes (or other types of goal descriptions, such as end terms or learning objectives) using taxonomies and/or SMART criteria.</p>
+<p class="pane-description">
+        Formulating clear, measurable, and effective learning outcomes is often an essential part of your educational design. Learning outcomes describe what students are expected to know or be able to do at the end of a lesson, module, course, or program. The better your learning outcomes are described, the easier it is to create matching activities and assessments (see Activity 3).</p>
+
+        <p>A poor learning outcome:<br/>
+        "Students understand how to write good emails."<br/>
+        This learning outcome is weak because it is not observable (how can you see 'understanding'?), lacks specificity (what does 'good' mean?), is not time-bound (when are emails considered good?), and is too vague (what type of emails?). This makes it difficult to determine whether students have actually acquired the intended skill.</p>
+
+        <p>A good learning outcome:<br/>
+        "By the end of this course, students can write a business email in English, using the correct tone and structure, and grammatically correct sentences at B1 level."<br/>
+        This learning outcome is good because it specifically states what students should be able to do ("write a business email in English"), clearly indicates the context ("using the correct tone and structure, and grammatically correct sentences"), and is measurable ("by the end of this course" and "at B1 level"). These criteria can easily be converted into an assessment rubric. Additionally, the target audience is mentioned, and the learning outcome includes a time indication ("by the end of this course").</p>
+
+        <p><strong>Example Prompts:</strong></p>
+        <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr style="background-color: #2E8B57; color: white;">
+                    <th>Activity</th>
+                    <th>Example Prompt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Formulating learning outcomes</td>
+                    <td>"I am a [ROLE] in [CONTEXT]. My target audience consists of [TARGET AUDIENCE]. For a [LESSON, SUBJECT, COURSE] on [TOPIC], I want to formulate [NUMBER] learning outcomes..."</td>
+                </tr>
+                <tr>
+                    <td>Improving existing learning outcomes</td>
+                    <td>"I am a [ROLE] in [CONTEXT]. My target audience consists of [TARGET AUDIENCE]. For a [LESSON, SUBJECT, COURSE] on [TOPIC], I have created the following intended learning outcomes: [LEARNING OUTCOMES]..."</td>
+                </tr>
+                <tr>
+                    <td>Analyzing existing learning outcomes</td>
+                    <td>"I am a [ROLE] in [CONTEXT]. My target audience consists of [TARGET AUDIENCE]. For a [LESSON, SUBJECT, COURSE] on [TOPIC], I have formulated the following existing learning outcomes: [LEARNING OUTCOMES]..."</td>
+                </tr>
+                <tr>
+                    <td>Creating templates for teams</td>
+                    <td>"I am a [ROLE] in [CONTEXT]. My target audience consists of [TARGET AUDIENCE]. For a [LESSON, SUBJECT, COURSE] on [TOPIC], I want to create a learning outcome using the following template..."</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="stamp" id="mindfulNotice">🌿 Be mindful: 10-20 messages = X bottles of water</div>
+
+    <script>
+        function showInfo(infoId) {
+            document.querySelectorAll('.info-pane').forEach(pane => pane.style.display = 'none');
+            const target = document.getElementById(infoId);
+            if (target) {
+                target.style.display = 'block';
+                target.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                alert('Information for this topic is not available yet.');
+            }
+        }
+    </script>
+
+    
+    <div class="info-pane" id="info1">
+        <h3 class="pane-title">Activity 7: Create interactive learning activities</h3>
+        <p><strong>Summary:</strong><br/>
+        Design engaging assignments that enhance the involvement and understanding of your students, such as discussion assignments, brainstorming tasks, icebreaker activities, formative assessments, and other creative ideas.</p>
+<p class="pane-description">
+        Engaging assignments are intended to enhance the involvement and understanding of students by actively involving them in the learning process. These assignments can take various forms, such as discussion assignments, brainstorming tasks, icebreaker activities, and formative assessment methods. By focusing on active cognitive processing, students achieve deeper learning. However, just because students are 'busy' does not necessarily mean they are cognitively engaged. Designing engaging assignments is one thing, ensuring that something actually happens in their minds is another. Regular checks for understanding are therefore essential, highlighting the importance of formative assessment.</p>
+
+        <p><strong>Example Prompts:</strong></p>
+        <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr style="background-color: #2E8B57; color: white;">
+                    <th>Activity</th>
+                    <th>Example Prompt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Generating ideas for assignments</td>
+                    <td>"I am a teacher in [CONTEXT] and I teach the following target audience: [TARGET AUDIENCE]. I want to develop ideas for assignments for the following learning outcomes: [LEARNING OUTCOMES]. Provide 10 suggestions in bullet points for the following types of assignments: [DISCUSSION/BRAINSTORM/ICEBREAKER/ETC.]. Explain the advantages and disadvantages of each suggestion."</td>
+                </tr>
+                <tr>
+                    <td>Elaborating on an assignment idea</td>
+                    <td>"Elaborate on the idea for an assignment about [IDEA NAME] in more detail. Pay attention to: [KEY POINTS]."</td>
+                </tr>
+                <tr>
+                    <td>Writing instructions for an assignment for students</td>
+                    <td>"Write the instructions for [ASSIGNMENT]. My target audience consists of: [TARGET AUDIENCE]. Consider the following key points: [KEY POINTS]."</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Tips and Variations:</strong></p>
+        <ul>
+            <li>When a particular assignment idea appeals to you, have the tool elaborate on it in more detail. Provide key points that you find important, such as classroom setup, difficulty level, or the amount of preparation the assignment may require.</li>
+            <li>Consider how you can use technology to enrich the assignments and/or enable differentiation.</li>
+            <li>Involve students in designing engaging assignments.</li>
+            <li>Vary the teaching methods and assignments to keep engagement high.</li>
+            <li>Experiment with the flipped classroom model, where students acquire knowledge before the lesson and use the lesson for deepening and applying that knowledge.</li>
+            <li>Use multimedia resources, such as videos, images, and interactive tools, to make the assignments more interesting and visual.</li>
+            <li>Ensure a good balance between individual assignments and collaborative assignments. Both forms contribute to active learning and offer different learning experiences.</li>
+            <li>Regularly evaluate the effectiveness of the engaging assignments. Ask for feedback from students and adjust the assignments as needed to optimize the learning process.</li>
+            <li>Don't ask for just one idea, but have 50 ideas developed at once. Get inspired!</li>
+        </ul>
+    </div>
+
+        
+        <h3 class="pane-title">Create Activating Learning Activities</h3>
+        <p><strong>Summary:</strong><br/>
+        Design activities that engage students actively and stimulate critical thinking and problem-solving.</p>
+<p class="pane-description">
+        Creating activities that activate learning encourages students to interact with the content, think critically, and apply concepts in real-world scenarios.</p>
+    
+    </div>
+    
+
+    <div class="info-pane" id="info2">
+        
+        <h3 class="pane-title">Create Your Own Rubrics</h3>
+        <p><strong>Summary:</strong><br/>
+        Develop personalized rubrics to evaluate student performance effectively and consistently.</p>
+<p class="pane-description">
+        Custom rubrics provide clear expectations and allow for objective evaluation of student work, enhancing feedback quality.</p>
+    
+    </div>
+    
+
+    <div class="info-pane" id="info3">
+        
+        <h3 class="pane-title">Reinvent Writing Assignments</h3>
+        <p><strong>Summary:</strong><br/>
+        Transform traditional writing tasks into engaging and innovative assignments.</p>
+<p class="pane-description">
+        Encourage creativity by reinventing writing assignments, such as through digital storytelling or collaborative writing projects.</p>
+    
+    </div>
+    
+
+    <div class="info-pane" id="info4">
+        
+        <h3 class="pane-title">Generate Quiz Questions</h3>
+        <p><strong>Summary:</strong><br/>
+        Automatically generate a variety of quiz questions for formative or summative assessments.</p>
+<p class="pane-description">
+        Utilize technology to generate diverse question types, including multiple choice, short answer, and true/false questions.</p>
+    
+    </div>
+    
+
+    
+    <div class="info-pane" id="info5">
+        <h3 class="pane-title">Reform Assessments or Design an Alternative Assessment Form</h3>
+        <p><strong>Summary:</strong><br/>
+        Reform traditional assessments into alternative, authentic assessment forms or design new assessment forms that emphasize deep learning and the application of knowledge in practice.</p>
+<p class="pane-description">
+        The traditional idea of assessment, often based on fact reproduction, has limitations and typically focuses on a one-time performance. Alternative assessment forms often focus on deeper and authentic learning. In these forms, students are exposed to more authentic problems and tasks that better reflect real-world scenarios. This approach requires students to integrate a range of knowledge, skills, and attitudes and encourages an iterative approach rather than a 'one-shot' approach. The focus shifts from performing to learning, emphasizing individual development and gaining success experiences, which enhances both motivation and learning outcomes. Use language models to transform existing assessments into these alternative forms, or simply get inspired by possibilities for alternative assessment forms.</p>
+
+        <p><strong>Example Prompts:</strong></p>
+        <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr style="background-color: #2E8B57; color: white;">
+                    <th>Activity</th>
+                    <th>Example Prompt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Generating an alternative assessment form</td>
+                    <td>"I am a teacher in [CONTEXT] and my target audience consists of [TARGET AUDIENCE]. I want to transform the following assessment form into an alternative assessment form: [DESCRIPTION OF OLD ASSESSMENT FORM]. The intended learning outcomes of the assessment are [LEARNING OUTCOMES]. Design an alternative assessment form that is more authentic, addresses higher-order thinking skills (such as analyzing, evaluating, and synthesizing), integrates a range of knowledge, skills, and attitudes, and emphasizes development rather than one-time performance. Provide three suggestions first, and then ask me which one you should elaborate on in more detail."</td>
+                </tr>
+                <tr>
+                    <td>Generating suggestions for assessment based on intended learning outcomes</td>
+                    <td>"I am a teacher in [CONTEXT] and my target audience consists of [TARGET AUDIENCE]. Based on the following learning outcome(s), provide 10 suggestions for assessment: [LEARNING OUTCOMES]. Ensure these suggestions are authentic, address higher-order thinking skills, integrate a range of knowledge, skills, and attitudes, and emphasize development rather than one-time performance."</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Tips and Variations:</strong></p>
+        <ul>
+            <li>Support alternative assessment forms with clear rubrics or success criteria. This helps students understand what is expected of them and how they can succeed in the assessment.</li>
+            <li>Use other digital technologies to support alternative assessment forms, such as a digital portfolio or tools for digital assessment.</li>
+            <li>Allow students to design and develop their own alternative assessment forms.</li>
+            <li>Consider assessing at the group level instead of individually.</li>
+        </ul>
+    </div>
+
+        
+        <h3 class="pane-title">Transform Assessment</h3>
+        <p><strong>Summary:</strong><br/>
+        Rethink traditional assessment methods to better align with modern educational goals.</p>
+<p class="pane-description">
+        Implement alternative assessment strategies, such as peer assessment, self-reflection, and project-based evaluation.</p>
+    
+    </div>
+    
+
+    <div class="info-pane" id="info7">
+        
+        <h3 class="pane-title">Discuss AI with Students</h3>
+        <p><strong>Summary:</strong><br/>
+        Facilitate discussions on the ethical, social, and practical implications of AI technology.</p>
+<p class="pane-description">
+        Engage students in meaningful conversations about AI's impact on society, careers, and daily life.</p>
+    
+    </div>
+    
+
+    <div class="info-pane" id="info8">
+        
+        <h3 class="pane-title">Make Skills More Explicit in Syllabus</h3>
+        <p><strong>Summary:</strong><br/>
+        Clearly outline the skills students will develop throughout the course or program.</p>
+<p class="pane-description">
+        Help students understand the relevance of their learning by explicitly stating skill development goals.</p>
+    
+    </div>
+    
+
+    
+    <div style="margin-top: 40px; text-align: center; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); width: 80%; max-width: 800px;">
+        <h3>Which prompt do you like the most?</h3>
+        <form id="pollForm">
+            <label><input type="radio" name="poll" value="Create Activating Learning Activities"> Create Activating Learning Activities</label><br>
+            <label><input type="radio" name="poll" value="Create Your Own Rubrics"> Create Your Own Rubrics</label><br>
+            <label><input type="radio" name="poll" value="Reinvent Writing Assignments"> Reinvent Writing Assignments</label><br>
+            <label><input type="radio" name="poll" value="Generate Quiz Questions"> Generate Quiz Questions</label><br>
+            <label><input type="radio" name="poll" value="Transform Assessment"> Transform Assessment</label><br>
+            <label><input type="radio" name="poll" value="Improve Learning Outcomes"> Improve Learning Outcomes</label><br>
+            <label><input type="radio" name="poll" value="Discuss AI with Students"> Discuss AI with Students</label><br>
+            <label><input type="radio" name="poll" value="Make Skills More Explicit in Syllabus"> Make Skills More Explicit in Syllabus</label><br><br>
+            <button type="button" onclick="submitPoll()" style="padding: 10px 20px; background-color: #2E8B57; color: white; border: none; cursor: pointer; font-size: 16px; border-radius: 5px;">Submit Vote</button>
+        </form>
+        <div id="pollResults" style="margin-top: 20px; display: none;">
+            <h4>Poll Results:</h4>
+            <ul id="resultsList" style="list-style-type: none; padding: 0;"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Simulate poll storage
+        var pollResults = {
+            "Create Activating Learning Activities": 0,
+            "Create Your Own Rubrics": 0,
+            "Reinvent Writing Assignments": 0,
+            "Generate Quiz Questions": 0,
+            "Transform Assessment": 0,
+            "Improve Learning Outcomes": 0,
+            "Discuss AI with Students": 0,
+            "Make Skills More Explicit in Syllabus": 0
+        };
+
+        function submitPoll() {
+            var selectedOption = document.querySelector('input[name="poll"]:checked');
+            if (!selectedOption) {
+                alert("Please select an option before submitting.");
+                return;
+            }
+
+            // Increment the selected option
+            pollResults[selectedOption.value] += 1;
+
+            // Display results
+            var resultsList = document.getElementById("resultsList");
+            resultsList.innerHTML = "";
+            for (var option in pollResults) {
+                var li = document.createElement("li");
+                li.innerText = option + ": " + pollResults[option] + " votes";
+                resultsList.appendChild(li);
+            }
+            document.getElementById("pollResults").style.display = "block";
+
+            // Clear selection
+            selectedOption.checked = false;
+        }
+    </script>
+
+<div style="margin-top: 40px; text-align: center;">
+        <h3 id="questionPrompt">Have a question for the TSB Innovation Team?</h3>
+        <p id="questionDescription">Type your question below and submit it to our team.</p>
+        <textarea id="teacherQuestion" rows="4" style="width: 80%; max-width: 600px; padding: 10px;"></textarea><br>
+        <button id="submitButton" onclick="submitQuestion()" style="margin-top: 10px; padding: 10px 20px; background-color: #2E8B57; color: white; border: none; cursor: pointer; font-size: 16px;">
+            Submit Question
+        </button>
+        <p id="submissionMessage" style="color: green; margin-top: 10px;"></p>
+    </div>
+
+    <script>
+        function submitQuestion() {
+            var question = document.getElementById("teacherQuestion").value;
+            if (question.trim() === "") {
+                alert("Please enter a question before submitting.");
+                return;
+            }
+            document.getElementById("submissionMessage").innerText = "Your question has been submitted to the TSB Innovation Team. Thank you!";
+            document.getElementById("teacherQuestion").value = ""; // Clear the input field
+        }
+    </script>
+
+
+    <script>
+        var translations = {
+            "en": {
+                "title": "8 Pages of Prompts for Teachers",
+                "footer": "The TSB Education Innovation Team",
+                "question_prompt": "Have a question for the TSB Innovation Team?",
+                "question_description": "Type your question below and submit it to our team.",
+                "submit_button": "Submit Question",
+                "submission_message": "Your question has been submitted to the TSB Innovation Team. Thank you!",
+                "mindful_notice": "🌿 Be mindful: 10-20 messages = X bottles of water",
+                "language_toggle": "🇳🇱 Nederlands"
+            },
+            "nl": {
+                "title": "8 Pagina's met Suggesties voor Leraren",
+                "footer": "Het TSB Innovatieteam voor Onderwijs",
+                "question_prompt": "Heb je een vraag voor het TSB Innovatieteam?",
+                "question_description": "Typ je vraag hieronder en stuur deze naar ons team.",
+                "submit_button": "Verstuur Vraag",
+                "submission_message": "Je vraag is ingediend bij het TSB Innovatieteam. Bedankt!",
+                "mindful_notice": "🌿 Wees bewust: 10-20 berichten = X flessen water",
+                "language_toggle": "🇬🇧 English"
+            }
+        };
+
+        function toggleLanguage() {
+            var currentLang = document.getElementById("languageToggle").dataset.lang;
+            var newLang = currentLang === "en" ? "nl" : "en";
+            document.getElementById("languageToggle").dataset.lang = newLang;
+            document.getElementById("languageToggle").innerText = translations[newLang]["language_toggle"];
+            document.getElementById("pageTitle").innerText = translations[newLang]["title"];
+            document.getElementById("footerText").innerText = translations[newLang]["footer"];
+            document.getElementById("questionPrompt").innerText = translations[newLang]["question_prompt"];
+            document.getElementById("questionDescription").innerText = translations[newLang]["question_description"];
+            document.getElementById("submitButton").innerText = translations[newLang]["submit_button"];
+            document.getElementById("mindfulNotice").innerText = translations[newLang]["mindful_notice"];
+        }
+    </script>
+
+
+    <script>
+        var paneTranslations = {'en': {'info1': {'title': 'Activity 7: Create interactive learning activities', 'description': 'Design engaging assignments that enhance the involvement and understanding of your students, such as discussion assignments, brainstorming tasks, icebreaker activities, formative assessments, and other creative ideas.'}, 'info2': {'title': 'Create Your Own Rubrics', 'description': 'Develop personalized rubrics to evaluate student performance effectively and consistently.'}, 'info3': {'title': 'Reinvent Writing Assignments', 'description': 'Transform traditional writing tasks into engaging and innovative assignments.'}, 'info4': {'title': 'Generate Quiz Questions', 'description': 'Automatically generate a variety of quiz questions for formative or summative assessments.'}, 'info5': {'title': 'Reform Assessments or Design an Alternative Assessment Form', 'description': 'Reform traditional assessments into alternative, authentic assessment forms or design new assessment forms that emphasize deep learning and the application of knowledge in practice.'}, 'info6': {'title': 'Create, Analyze, or Improve Your Intended Learning Outcomes', 'description': 'Formulate, evaluate, and optimize your intended learning outcomes using taxonomies and/or SMART criteria.'}, 'info7': {'title': 'Discuss AI with Students', 'description': 'Facilitate discussions on the ethical, social, and practical implications of AI technology.'}, 'info8': {'title': 'Make Skills More Explicit in Syllabus', 'description': 'Clearly outline the skills students will develop throughout the course or program.'}}, 'nl': {'info1': {'title': 'Activiteit 7: Creëer interactieve leeractiviteiten', 'description': 'Ontwerp boeiende opdrachten die de betrokkenheid en het begrip van uw studenten vergroten, zoals discussies, brainstormsessies, kennismakingsactiviteiten, formatieve toetsen en andere creatieve ideeën.'}, 'info2': {'title': 'Maak Je Eigen Rubrieken', 'description': 'Ontwikkel gepersonaliseerde rubrieken om de prestaties van studenten effectief en consistent te evalueren.'}, 'info3': {'title': 'Herschrijf Schrijfopdrachten', 'description': 'Transformeer traditionele schrijfopdrachten tot boeiende en innovatieve opdrachten.'}, 'info4': {'title': 'Genereer Quizvragen', 'description': 'Genereer automatisch verschillende soorten quizvragen voor formatieve of summatieve toetsen.'}, 'info5': {'title': 'Hervorm Toetsen of Ontwerp een Alternatieve Toetsvorm', 'description': 'Hervorm traditionele toetsen tot alternatieve, authentieke toetsvormen of ontwerp nieuwe toetsvormen die diepgaand leren en de toepassing van kennis in de praktijk benadrukken.'}, 'info6': {'title': 'Creëer, Analyseer of Verbeter Je Leerdoelen', 'description': 'Formuleer, evalueer en optimaliseer je leerdoelen met behulp van taxonomieën en/of SMART-criteria.'}, 'info7': {'title': 'Bespreek AI met Studenten', 'description': 'Begeleid gesprekken over de ethische, sociale en praktische implicaties van AI-technologie.'}, 'info8': {'title': 'Maak Vaardigheden Explicieter in het Lesprogramma', 'description': 'Geef duidelijk aan welke vaardigheden studenten ontwikkelen gedurende de cursus of het programma.'}}};
+
+        function toggleLanguage() {
+            var currentLang = document.getElementById("languageToggle").dataset.lang;
+            var newLang = currentLang === "en" ? "nl" : "en";
+            document.getElementById("languageToggle").dataset.lang = newLang;
+            document.getElementById("languageToggle").innerText = translations[newLang]["language_toggle"];
+            document.getElementById("pageTitle").innerText = translations[newLang]["title"];
+            document.getElementById("footerText").innerText = translations[newLang]["footer"];
+            document.getElementById("questionPrompt").innerText = translations[newLang]["question_prompt"];
+            document.getElementById("questionDescription").innerText = translations[newLang]["question_description"];
+            document.getElementById("submitButton").innerText = translations[newLang]["submit_button"];
+            document.getElementById("mindfulNotice").innerText = translations[newLang]["mindful_notice"];
+            
+            // Translate information panes
+            Object.keys(paneTranslations[newLang]).forEach(function(infoId) {
+                document.querySelector("#" + infoId + " .pane-title").innerText = paneTranslations[newLang][infoId]["title"];
+                document.querySelector("#" + infoId + " .pane-description").innerText = paneTranslations[newLang][infoId]["description"];
+            });
+        }
+    </script>
+
+</body>
+</html>
